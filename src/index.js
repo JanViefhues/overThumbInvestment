@@ -1,4 +1,5 @@
 require("./properties");
-require("./d3Chart");
+
+require("./map");
 
 

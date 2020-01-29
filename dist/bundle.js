@@ -6338,17 +6338,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dis
 
 /***/ }),
 
-/***/ "./src/d3Chart.js":
-/*!************************!*\
-  !*** ./src/d3Chart.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("__webpack_require__(/*! ./properties */ \"./src/properties.js\")\n\n\n// const svg = d3.select('#testElement').append('svg')\n//     .attr('width', 500)\n//     .attr('height', 500)\n//     .style('background-color', '#666666')\n\n\n\n\n\n//# sourceURL=webpack:///./src/d3Chart.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -6356,7 +6345,18 @@ eval("__webpack_require__(/*! ./properties */ \"./src/properties.js\")\n\n\n// c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./properties */ \"./src/properties.js\");\n__webpack_require__(/*! ./d3Chart */ \"./src/d3Chart.js\");\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__(/*! ./properties */ \"./src/properties.js\");\n\n__webpack_require__(/*! ./map */ \"./src/map.js\");\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/map.js":
+/*!********************!*\
+  !*** ./src/map.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\nconst mymap = L.map(\"mapid\").setView([51.00, 9.00], 7);\n\n// var latlngs = [\n//   [37, -109.05],\n//   [41, -109.03],\n//   [41, -102.05],\n//   [37, -102.04],\n//   [36, -102.04],\n//   [37, -102.04]\n// ];\n// var polygon = L.polygon(latlngs, { color: \"red\" }).addTo(mymap);\n// // zoom the map to the polygon\n// mymap.fitBounds(polygon.getBounds());\n\nvar myLines = [\n  {\n    type: \"LineString\",\n    coordinates: [\n      [-100, 40],\n      [-105, 45],\n      [-110, 55]\n    ]\n  }\n];\n\nvar myStyle = {\n  color: \"#ff7800\",\n  weight: 5,\n  opacity: 0.65\n};\n\nL.geoJSON(myLines, {\n  style: myStyle\n}).addTo(mymap);\n\n\n\n\n\n\n\nconst attribution = \n'&copy; <a href=\"https://www.openstreetmap.org/copyright\"> OpenStreetMap </a> contributors';\n\n\nconst tileUrl = 'https://{s}.tile.openStreetmap.org/{z}/{x}/{y}.png';\nconst tiles = L.tileLayer(tileUrl, {attribution})\ntiles.addTo(mymap);  \nL.marker([50.935173, 6.953101]).addTo(mymap);\nL.marker([50.935173, 10]).addTo(mymap);\n\n\n\n\n//# sourceURL=webpack:///./src/map.js?");
 
 /***/ }),
 

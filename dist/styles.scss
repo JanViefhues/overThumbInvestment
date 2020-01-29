@@ -95,9 +95,10 @@ header{
 }
 
 body{
-    background-color: #EEE6ED;
+    // background-color: #EEE6ED;
+    background-color:  rgb(132, 91, 119);
     // background-color: #FFF5F9;
-    // background-color: #CF9EAC;
+    background-color: #CBCCFF;
 
 }
 
@@ -163,7 +164,16 @@ body{
         padding-top: 5%;
         margin-top: 10%;
         flex-wrap: wrap;
-        background-color: green;
+        background-color: #F1E8F0;
         border-radius: 8px;
+        // border: 2px solid  #28161C;
+        border: 0.5px solid lightgrey;
     }
 }
+
+
+
+// -------------------------------
+// map
+
+#mapid { height: 400px; }

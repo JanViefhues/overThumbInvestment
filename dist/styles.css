@@ -91,7 +91,8 @@ header .logo {
 }
 
 body {
-  background-color: #EEE6ED;
+  background-color: #845b77;
+  background-color: #CBCCFF;
 }
 
 .body {
@@ -178,7 +179,12 @@ body {
   margin-top: 10%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: green;
+  background-color: #F1E8F0;
   border-radius: 8px;
+  border: 0.5px solid lightgrey;
+}
+
+#mapid {
+  height: 400px;
 }
 /*# sourceMappingURL=styles.css.map */
