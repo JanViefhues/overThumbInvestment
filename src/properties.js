@@ -1,67 +1,6 @@
 import { dsvFormat } from "d3";
 
-// let propertyData;
-
-// const __styleIncomeRate = value => {
-//   const svg = d3
-//     .select("#testDiv")
-//     .append("svg")
-//     .attr("width", 200)
-//     .attr("height", 200)
-//     .style("background-color", "#666666");
-    
-//   svg
-//     .selectAll("cirlce")
-//     .data(value)
-//     .enter()
-//     .append("circle")
-//     .attr("cx", 20)
-//     .attr("cy", 10)
-//     .attr("r", 5);
-// };
-
-// const _calculateIncomeRate = propertyData => {
-//   let rent = propertyData.size * propertyData.squareMeterRent * 12; // total rent / year
-//   let rate = (rent / propertyData.price) * 100; // calculate incomeRate
-//   let roundedRate = rate.toFixed(2);
-//   // return `${roundedRate} %`;
-//   return roundedRate;
-//   updateReadings(roundedRate);
-// };
-
-// const getInput = event => {
-//   event.preventDefault();
-
-//   propertyData = {
-//     price: document.getElementById("priceInput").value,
-//     size: document.getElementById("squareMetersInput").value,
-//     squareMeterRent: document.getElementById("rentInput").value
-//   };
-//   console.log(propertyData);
-
-//   // deletes the old element from the DOM before rendering the new
-//   let oldEle = document.getElementById("testDiv");
-//   if (oldEle) oldEle.remove();
-
-//   // rendering the calculated rent on the page for testing
-//   let result = document.createElement("p");
-//   result.setAttribute("id", "testDiv");
-//   result.innerHTML = _calculateIncomeRate(propertyData);
-//   document.body.appendChild(result);
-//   let data = _calculateIncomeRate(propertyData);
-//   __styleIncomeRate(data);
-// };
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   document.getElementById("btnProperty").addEventListener("click", getInput, );
-// });
-
-
-
-
-
-// d3 for rendering the gauge-chart
-
+//  :Part1: -----------------Creating gauge chart------------------ //
 
 let gauge = function(container, configuration) {
   let that = {};
@@ -91,7 +30,9 @@ let gauge = function(container, configuration) {
     labelFormat: d3.format("d"),
     labelInset: 10,
 
-    arcColorFn: d3.interpolateHsl(d3.rgb("#ff0000"), d3.rgb("#00ff00"))
+    // arcColorFn: d3.interpolateHsl(d3.rgb("#ff0000"), d3.rgb("#00ff00"))
+
+    arcColorFn: d3.interpolateHsl(d3.rgb("#5A3E51"), d3.rgb("#FFFF"))
   };
   let range = undefined;
   let r = undefined;
@@ -162,7 +103,7 @@ let gauge = function(container, configuration) {
   }
   that.isRendered = isRendered;
 
-  function render(newValue) {
+  function renderChart(newValue) {
     svg = d3
       .select(container)
       .append("svg:svg")
@@ -229,7 +170,8 @@ let gauge = function(container, configuration) {
 
     update(newValue === undefined ? 0 : newValue);
   }
-  that.render = render;
+  that.renderChart = renderChart;
+
   function update(newValue, newConfiguration) {
     if (newConfiguration !== undefined) {
       configure(newConfiguration);
@@ -249,60 +191,64 @@ let gauge = function(container, configuration) {
   return that;
 };
 
-function onDocumentReady() {
-  let powerGauge = gauge("#power-gauge", {
-    size: 300,
-    clipWidth: 300,
-    clipHeight: 300,
-    ringWidth: 40,
-    maxValue: 10,
-    transitionMs: 4000
-  });
-  powerGauge.render();
+// setting the size values for the gaug graph
+let powerGauge = gauge("#power-gauge", {
+  size: 300,
+  widht: 100,
+  clipWidth: 300,
+  clipHeight: 250,
+  ringWidth: 40,
+  maxValue: 15,
+  transitionMs: 5000
+});
 
-  function updateReadings(x) {
-  //   // just pump in random data here...
-    powerGauge.update(x);
-  }
 
-  // updateReadings();
-  // every few seconds update reading values
-  // updateReadings();
-  // setInterval(function() {
-  //   updateReadings();
-  // },  500 * 1);
+
+
+
+//  :Part2: ---------------- Connection logic to gauge chart ----------------- //
+
+// rendring the gauge with default value of 0;
+function onDocumentReady(gauge) {
+  gauge.renderChart();
+  gauge.update(0);
 }
 
+// updating the gauge with the user input (incomeRate)
+function updateGauge(gauge2, num) {
+  gauge2.update(num);
+}
+
+// when want render the gauge graph when the document is loaded
 if (!window.isLoaded) {
   window.addEventListener(
     "load",
     function() {
-      onDocumentReady();
+      onDocumentReady(powerGauge);
     },
     false
   );
 } else {
-  onDocumentReady();
+  onDocumentReady(powerGauge);
 }
 
 
-
+// :Part3: -------- Getting the input data and do calculation ------------- //
 
 let propertyData;
-
+// let incomeRate;
 
 const _calculateIncomeRate = propertyData => {
   let rent = propertyData.size * propertyData.squareMeterRent * 12; // total rent / year
   let rate = (rent / propertyData.price) * 100; // calculate incomeRate
   let roundedRate = rate.toFixed(2);
-  // return `${roundedRate} %`;
-  // return roundedRate;
-  updateReadings(roundedRate);
+  console.log(`${roundedRate} %`); //`${roundedRate} %`;
+
+  return roundedRate;
 };
 
 const getInput = event => {
   event.preventDefault();
-
   propertyData = {
     price: document.getElementById("priceInput").value,
     size: document.getElementById("squareMetersInput").value,
@@ -310,19 +256,26 @@ const getInput = event => {
   };
   console.log(propertyData);
 
-  // deletes the old element from the DOM before rendering the new
-  let oldEle = document.getElementById("testDiv");
+  // deletes old element from DOM before rendering  new
+  let oldEle = document.getElementById("IncomeRate");
   if (oldEle) oldEle.remove();
 
-  // rendering the calculated rent on the page for testing
-  // let result = document.createElement("p");
-  // result.setAttribute("id", "testDiv");
-  // result.innerHTML = _calculateIncomeRate(propertyData);
-  // document.body.appendChild(result);
-  _calculateIncomeRate(propertyData);
-  // __styleIncomeRate(data);
+  // rendering calculated rent rate on page
+  let result = document.createElement("p");
+  result.setAttribute("id", "IncomeRate");
+  result.innerHTML = _calculateIncomeRate(propertyData);
+  document.body.appendChild(result);
+
+  let incomeRate = _calculateIncomeRate(propertyData);
+  updateGauge(powerGauge, incomeRate);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnProperty").addEventListener("click", getInput);
 });
+
+
+
+
+
+
