@@ -66,6 +66,12 @@ html * {
   font-size: 14px;
   font-weight: bold;
   fill: #666;
+  position: absolute;
+  z-index: -1;
+}
+
+svg {
+  margin-top: 5%;
 }
 
 header {
@@ -73,9 +79,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   height: 60px;
-  background-color: #001f3f;
+  background-color: #28161C;
   width: 100%;
-  margin-bottom: 20px;
   color: white;
   font-size: 25px;
 }
@@ -85,15 +90,95 @@ header .logo {
   margin-left: 5%;
 }
 
+body {
+  background-color: #EEE6ED;
+}
+
 .body {
-  width: 70%;
+  width: 80%;
   margin: auto 0;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .body #IncomeRate {
   color: red;
   margin-left: 5%;
+}
+
+.body .Property-Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200px;
+  background-color: #845b77;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+}
+
+.body .Property-Form .property-from-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.body .Property-Form .property-from-inputs input {
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.body .Property-Form .property-from-inputs .input-price {
+  margin-left: 10px;
+}
+
+.body .Property-Form #btnProperty {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  height: 40px;
+  border-radius: 8px;
+  padding: 10px 14px;
+  vertical-align: middle;
+  font: 400 11px system-ui;
+  cursor: pointer;
+}
+
+.body .Form-1-header {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: white;
+}
+
+.body .Property-Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 5%;
+  margin-top: 10%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: green;
+  border-radius: 8px;
 }
 /*# sourceMappingURL=styles.css.map */

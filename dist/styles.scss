@@ -67,6 +67,12 @@ html * {
   font-size: 14px;
   font-weight: bold;
   fill: #666;
+  position: absolute;
+  z-index: -1;
+}
+
+svg{
+    margin-top: 5%;
 }
 
 // ------------------------------------
@@ -76,32 +82,88 @@ html * {
 header{
     display: flex;
     height: 60px;
-    background-color:#001f3f;
+    background-color: #28161C;
     width: 100%;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     color: white;
     font-size: 25px;
     
     .logo{
-
         margin: auto 0;
         margin-left: 5%;
-        
     }
+}
+
+body{
+    background-color: #EEE6ED;
+    // background-color: #FFF5F9;
+    // background-color: #CF9EAC;
+
 }
 
 
 .body{
-
-    width: 70%;
+    width: 80%;
     margin: auto 0;
-    margin-left: 15%;
-    margin-right: 15%;
-    
-
-
+    margin-left: 10%;
+    margin-right: 10%;
     #IncomeRate{
         color: red;
         margin-left: 5%;
+    }
+
+    .Property-Form{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        background-color:  rgb(132, 91, 119);
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 6px;
+    
+        .property-from-inputs{
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            input{
+                margin-right: 10px;
+                border-radius: 2px;
+            }
+            .input-price{
+                 margin-left: 10px;
+            }
+        }
+        #btnProperty{
+            // margin-bottom: 10%;
+            align-items: center;
+            width: 30%;
+            height: 40px;
+            border-radius: 8px;
+            padding: 10px 14px;
+            // text-align: center;
+            vertical-align: middle;
+            font: 400 11px system-ui;
+            
+            cursor: pointer;
+        }
+    }
+
+     .Form-1-header{
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            color: white;
+        }
+
+    .Property-Container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 5%;
+        margin-top: 10%;
+        flex-wrap: wrap;
+        background-color: green;
+        border-radius: 8px;
     }
 }
