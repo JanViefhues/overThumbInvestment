@@ -1,5 +1,6 @@
-require("./properties");
 
+require("./properties");
+require('./testing')
 require("./map");
 
 
