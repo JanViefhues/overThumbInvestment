@@ -76,13 +76,16 @@ html * {
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
-    border: 1px solid red;
+    // border: 1px solid white;
     border-radius: 6px;
-    padding-right: 40px;
-    padding-left: 40px;
+    // padding-right: 40px;
+    // padding-left: 40px;
     padding-bottom: 10px;
-    background-color:#CBCCFF;
-    height: 400px;
+    padding-top: 10px;
+    // background-color:#CBCCFF;
+    height: 405px;
+    // background-color: #101024;
+
     
 }
 
@@ -97,69 +100,98 @@ svg{
 header{
     display: flex;
     height: 70px;
-    background-color: #28161C;
+    color: white;
+    //  background: linear-gradient(to right, #c31432, #240b36);
+      background: linear-gradient(to right, #a60b25, #240b36);
     width: 100%;
     // margin-bottom: 20px;
-    color: white;
+    // color: white;
     font-size: 25px;
     
     .logo{
         margin: auto 0;
         margin-left: 5%;
+        height: 100px;
     }
 }
 
 body{
     // background-color: #EEE6ED;
-    background-color:  rgb(132, 91, 119);
+    // background-color:  rgb(132, 91, 119);
     // background-color: #FFF5F9;
-    background-color: #CBCCFF;
+    // background-color: #00003E;
+    background-color: rgb(16, 14, 23);
+    // background-color: #00003E;
+    //  background: linear-gradient(to right, #000428, #004e92);
+    //  background: linear-gradient(to right, #dc2424, #4a569d);
+     
+
 
 }
 
 
 .body{
-    width: 80%;
+    // width: 80%;
     margin: auto 0;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
+    
     .Property-Form{
         display: flex;
         flex-direction: column;
         height: 411px;
-        background-color:  rgb(132, 91, 119);
-        justify-content: space-around;
+        // background-color: #00003E;
+        justify-content: space-between;
         align-items: center;
         border-radius: 6px;
+        border: 1px solid white;
+        color: white;
+        font-size: 40px;
         // width: 40%;
     
         .property-from-inputs{
             display: flex;
             flex-direction: row;
             height: 40px;
-            padding-left: 80px;
-            padding-right: 80px;
+            // padding-left: 20px;
+            // padding-right: 20px;
+            font-size: 50px;
+
+            ::placeholder{
+                    font-size: 15px;
+                    text-align: center;
+                 }
 
             input{
-                margin-right: 10px;
+                margin-right: 30px;
                 border-radius: 2px;
+                font-size: 20px;
+                width: 150px;
+                
             }
             .input-price{
-                 margin-left: 10px;
+                 margin-left: 18px;
             }
         }
         #btnProperty{
             // margin-bottom: 10%;
             align-items: center;
-            width: 30%;
-            height: 40px;
+            width: 40%;
+            height: 50px;
             border-radius: 8px;
+            border: none;
             padding: 10px 14px;
             // text-align: center;
             vertical-align: middle;
             font: 400 11px system-ui;
-            
             cursor: pointer;
+            // background: linear-gradient(to right, #c31432, #240b36);
+            background: #96c93d;
+
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            text-transform:uppercase ;
         }
     }
 
@@ -177,21 +209,35 @@ body{
         margin-top: 10%;
         margin-bottom: 10%;
         flex-wrap: wrap;
-        background-color: #F1E8F0;
+        // background-color: #BFBFFF;
+        // background-color: #3F458157;
+        // background-color: #161024;
+
+        // background: linear-gradient(to right, #1e3c72, #2a5298);
         border-radius: 8px;
         // border: 2px solid  #28161C;
-        border: 0.5px solid lightgrey;
+        // border: 0.5px solid lightgrey;
+        // background: linear-gradient(to right, #24c6dc, #514a9d);
         min-height: 400px;
         align-items: center;
 
         #Your-return-rate{
-            border: 1px solid red;
+            // border: 1px solid red;
+            // border: 1px solid blue;
             height: 10px;
-            // margin-top: 30%;
+            // padding-top: 10px;
+            color: white;
+            font-size: 40px;
+            
             
 
            p{
-               margin-bottom: 60%;
+            //    margin-top: 10%;
+               margin-bottom: 10%;
+               color: white;
+               border-radius: 10px;
+               
+               
                
            }
         }
@@ -204,4 +250,10 @@ body{
 // -------------------------------
 // map
 
-#mapid { height: 400px; }
+#mapid { 
+    height: 600px; 
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 8px;
+    margin-bottom: 10%;
+}

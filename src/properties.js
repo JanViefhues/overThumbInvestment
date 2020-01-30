@@ -32,7 +32,8 @@ let gauge = function(container, configuration) {
 
     // arcColorFn: d3.interpolateHsl(d3.rgb("#ff0000"), d3.rgb("#00ff00"))
 
-    arcColorFn: d3.interpolateHsl(d3.rgb("#5A3E51"), d3.rgb("#FFFF"))
+    // arcColorFn: d3.interpolateHsl(d3.rgb("#5A3E51"), d3.rgb("#FFFF"))
+    arcColorFn: d3.interpolateHsl(d3.rgb("#ED213A"), d3.rgb("#96c93d"))
   };
   let range = undefined;
   let r = undefined;

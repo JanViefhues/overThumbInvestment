@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,8 +88,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -29,17 +106,21 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
@@ -75,20 +156,17 @@ html * {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  border: 1px solid red;
   border-radius: 6px;
-  padding-right: 40px;
-  padding-left: 40px;
   padding-bottom: 10px;
-  background-color: #CBCCFF;
-  height: 400px;
+  padding-top: 10px;
+  height: 405px;
 }
 
 header {
@@ -96,27 +174,27 @@ header {
   display: -ms-flexbox;
   display: flex;
   height: 70px;
-  background-color: #28161C;
-  width: 100%;
   color: white;
+  /* background: -webkit-gradient(linear, left top, right top, from(#a60b25), to(#240b36)); */
+  background: linear-gradient(to right, #a60b25, #240b36);
+  width: 100%;
   font-size: 25px;
 }
 
 header .logo {
   margin: auto 0;
   margin-left: 5%;
+  height: 100px;
 }
 
 body {
-  background-color: #845b77;
-  background-color: #CBCCFF;
+  background-color: #100e17;
 }
 
 .body {
-  width: 80%;
   margin: auto 0;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 
 .body .Property-Form {
@@ -125,16 +203,19 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 411px;
-  background-color: #845b77;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 6px;
+  border: 1px solid white;
+  color: white;
+  font-size: 40px;
 }
 
 .body .Property-Form .property-from-inputs {
@@ -143,33 +224,60 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   height: 40px;
-  padding-left: 80px;
-  padding-right: 80px;
+  font-size: 50px;
+}
+
+.body .Property-Form .property-from-inputs ::-webkit-input-placeholder {
+  font-size: 15px;
+  text-align: center;
+}
+
+.body .Property-Form .property-from-inputs :-ms-input-placeholder {
+  font-size: 15px;
+  text-align: center;
+}
+
+.body .Property-Form .property-from-inputs ::-ms-input-placeholder {
+  font-size: 15px;
+  text-align: center;
+}
+
+.body .Property-Form .property-from-inputs ::placeholder {
+  font-size: 15px;
+  text-align: center;
 }
 
 .body .Property-Form .property-from-inputs input {
-  margin-right: 10px;
+  margin-right: 30px;
   border-radius: 2px;
+  font-size: 20px;
+  width: 150px;
 }
 
 .body .Property-Form .property-from-inputs .input-price {
-  margin-left: 10px;
+  margin-left: 18px;
 }
 
 .body .Property-Form #btnProperty {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 30%;
-  height: 40px;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40%;
+  height: 50px;
   border-radius: 8px;
+  border: none;
   padding: 10px 14px;
   vertical-align: middle;
   font: 400 11px system-ui;
   cursor: pointer;
+  background: #96c93d;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .body .Form-1-header {
@@ -183,35 +291,45 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding-top: 3%;
   padding-bottom: 3%;
   margin-top: 10%;
   margin-bottom: 10%;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #F1E8F0;
+  flex-wrap: wrap;
   border-radius: 8px;
-  border: 0.5px solid lightgrey;
   min-height: 400px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  
 }
 
 .body .Property-Container #Your-return-rate {
-  border: 1px solid red;
   height: 10px;
+  color: white;
+  font-size: 40px;
 }
 
 .body .Property-Container #Your-return-rate p {
-  margin-bottom: 60%;
+  margin-bottom: 10%;
+  color: white;
+  border-radius: 10px;
 }
 
 #mapid {
-  height: 400px;
+  height: 600px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 8px;
+  margin-bottom: 10%;
 }
 /*# sourceMappingURL=styles.css.map */
+.avarageMap{
+  color: white;
+}
