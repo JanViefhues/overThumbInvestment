@@ -71,8 +71,23 @@ html * {
   z-index: -1;
 }
 
+#power-gauge{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 6px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    background-color:#CBCCFF;
+    height: 400px;
+    
+}
+
 svg{
-    margin-top: 5%;
+    // margin-top: 5%;
 }
 
 // ------------------------------------
@@ -81,7 +96,7 @@ svg{
 
 header{
     display: flex;
-    height: 60px;
+    height: 70px;
     background-color: #28161C;
     width: 100%;
     // margin-bottom: 20px;
@@ -108,26 +123,22 @@ body{
     margin: auto 0;
     margin-left: 10%;
     margin-right: 10%;
-    #IncomeRate{
-        color: red;
-        margin-left: 5%;
-    }
-
     .Property-Form{
         display: flex;
         flex-direction: column;
-        height: 200px;
+        height: 411px;
         background-color:  rgb(132, 91, 119);
         justify-content: space-around;
         align-items: center;
         border-radius: 6px;
+        // width: 40%;
     
         .property-from-inputs{
             display: flex;
             flex-direction: row;
             height: 40px;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 80px;
+            padding-right: 80px;
 
             input{
                 margin-right: 10px;
@@ -161,13 +172,30 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        padding-top: 5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
         margin-top: 10%;
+        margin-bottom: 10%;
         flex-wrap: wrap;
         background-color: #F1E8F0;
         border-radius: 8px;
         // border: 2px solid  #28161C;
         border: 0.5px solid lightgrey;
+        min-height: 400px;
+        align-items: center;
+
+        #Your-return-rate{
+            border: 1px solid red;
+            height: 10px;
+            // margin-top: 30%;
+            
+
+           p{
+               margin-bottom: 60%;
+               
+           }
+        }
+    
     }
 }
 

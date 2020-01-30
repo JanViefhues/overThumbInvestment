@@ -193,9 +193,9 @@ let gauge = function(container, configuration) {
 
 // setting the size values for the gaug graph
 let powerGauge = gauge("#power-gauge", {
-  size: 300,
+  size: 450,
   widht: 100,
-  clipWidth: 300,
+  clipWidth: 450,
   clipHeight: 250,
   ringWidth: 40,
   maxValue: 15,
@@ -261,10 +261,12 @@ const getInput = event => {
   if (oldEle) oldEle.remove();
 
   // rendering calculated rent rate on page
-  let result = document.createElement("p");
+  let result = document.createElement("h2");
   result.setAttribute("id", "IncomeRate");
   result.innerHTML = _calculateIncomeRate(propertyData);
-  document.body.appendChild(result);
+  // document.body.appendChild(result);
+  // result.append(div)
+  document.getElementById("Your-return-rate").appendChild(result);
 
   let incomeRate = _calculateIncomeRate(propertyData);
   updateGauge(powerGauge, incomeRate);
