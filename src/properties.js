@@ -1,7 +1,5 @@
 import { dsvFormat } from "d3";
 
-
-
 //  :Part1: -----------------Creating gauge chart------------------ //
 
 let gauge = function(container, configuration) {
@@ -205,10 +203,6 @@ let powerGauge = gauge("#power-gauge", {
   transitionMs: 5000
 });
 
-
-
-
-
 //  :Part2: ---------------- Connection logic to gauge chart ----------------- //
 
 // rendring the gauge with default value of 0;
@@ -235,7 +229,6 @@ if (!window.isLoaded) {
   onDocumentReady(powerGauge);
 }
 
-
 // :Part3: -------- Getting the input data and do calculation ------------- //
 
 let propertyData;
@@ -254,42 +247,39 @@ const getInput = event => {
   propertyData = {
     price: document.getElementById("priceInput").value,
     size: document.getElementById("squareMetersInput").value,
-    squareMeterRent: document.getElementById("rentInput").value,
-    // city: document.getElementById("cityInput").value
-
+    squareMeterRent: document.getElementById("rentInput").value
   };
-  console.log(propertyData);
 
   // deletes old element from DOM before rendering  new
+  
+  let oldValidation = document.getElementById("validation-input");
+  if (oldValidation) oldValidation.remove();
   let incomeRate = _calculateIncomeRate(propertyData);
-  if (incomeRate > 50 ) {
+
+  if (!propertyData.price && !propertyData.size && !propertyData.squareMeterRent) {
+    let FormVal = document.createElement("h2");
+    FormVal.setAttribute("id", "validation-input");
+    FormVal.innerHTML = "Please fill in porperty data";
+    document.getElementById("validations").appendChild(FormVal);
+
+  } else if (incomeRate > 50) {
     return alert(
       `${incomeRate}% return? Right input? Your property numbers seems to be unrealistic. If they are real, go and buy that property right NOW!!!! `
     );
-  }
-  let oldEle = document.getElementById("IncomeRate");
-  if (oldEle) oldEle.remove();
+  } else {
+           let oldEle = document.getElementById("IncomeRate");
+           if (oldEle) oldEle.remove();
 
-  // rendering calculated rent rate on page
-  let result = document.createElement("h2");
-  result.setAttribute("id", "IncomeRate");
+           // rendering calculated rent rate on page
+           let result = document.createElement("h2");
+           result.setAttribute("id", "IncomeRate");
 
-  result.innerHTML = incomeRate + "%";
-  document.getElementById("Your-return-rate").appendChild(result);
-  
-
-  updateGauge(powerGauge, incomeRate);
+           result.innerHTML = incomeRate + "%";
+           document.getElementById("Your-return-rate").appendChild(result);
+           updateGauge(powerGauge, incomeRate);
+         }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnProperty").addEventListener("click", getInput);
 });
-
-
-
-
-
-
-
-
-

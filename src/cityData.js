@@ -1,17 +1,11 @@
-
 // import {calculateNetIncomeRate} from "./map";
 
-
-
 // get the avarage rate for the city
-
 
 function calculate(acqPrice, rent) {
   let rate = ((rent * 12) / acqPrice) * 100;
   return rate.toFixed(2);
 }
-
-
 
 let citys = [
   {
@@ -120,12 +114,9 @@ let citys = [
     rental: 6.1
   }
 ];
-    
-
 
 let price;
 let rent;
-    
 
 const getCityInput = event => {
   event.preventDefault();
@@ -133,28 +124,23 @@ const getCityInput = event => {
     cityName: document.getElementById("cityInput").value
   };
   if (cityData.cityName) {
-    for (let i = 0; i < citys.length; i++){
+    for (let i = 0; i < citys.length; i++) {
       let city = citys[i];
-      if (city.name === cityData.cityName){
+      if (city.name === cityData.cityName) {
         // console.log(city.rental);
         price = city.acqPrice;
         rent = city.rental;
       }
     }
+
+    let oldAvg = document.getElementById("AvgRate");
+    if (oldAvg) oldAvg.remove();
+    let newAvg = document.createElement("h2");
+    newAvg.setAttribute("id", "AvgRate");
+    newAvg.innerHTML = `The avarage for ${cityData.cityName} is ` + calculate(price, rent) + "%";
+    document.getElementById("Your-return-rate").appendChild(newAvg);
   }
-
 };
-
-let oldAvg = document.getElementById("AvgRate");
-if (oldAvg) oldAvg.remove();
-
-let newAvg = document.createElement("h2");
-newAvg.setAttribute("id", "AvgRate");
-
-newAvg.innerHTML = calculate(price, rent) + "%";
-document.getElementById("Your-return-rate").appendChild(newAvg);
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   document

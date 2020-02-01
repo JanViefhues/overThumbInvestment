@@ -77,11 +77,11 @@ html * {
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
-    margin-top: 5%;
+    // margin-top: 5%;
     border-radius: 6px;
     padding-bottom: 10px;
     padding-top: 10px;
-    height: 405px;
+    // height: 405px;
 }
 
 
@@ -127,6 +127,19 @@ body{
     margin: auto 0;
     
 
+   
+    #validation-input{
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 25px;
+        width: 700px;
+        text-align: center;
+        background-color: red;
+        color: black;
+        letter-spacing: 2px;
+        border: 2px dotted white;
+    }
     h1{
         color: white;
         font-size: 50px;
@@ -146,7 +159,7 @@ body{
         border: 1px solid #5B6568;
         background-color: rgb(16, 19, 50);
         padding-top: 5%;
-        padding-bottom: 3%;
+        padding-bottom: 2%;
         padding-left: 3%;
         padding-right: 3%;
         color: white;
@@ -173,6 +186,7 @@ body{
                  margin-left: 18px;
             }
         }
+        
         #btnProperty{
             // margin-bottom: 10%;
             align-items: center;
@@ -192,6 +206,16 @@ body{
             text-transform:uppercase ;
         }
     }
+     .returns{
+        height: 100px;
+        margin-bottom: 298px ;
+        border: 1px solid #5B6568;
+        background-color: rgb(16, 19, 50);
+        border-radius: 10px;
+        padding-top: 3px;
+        padding-bottom: 5px;
+
+        }
 
      .Form-1-header{
             font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -203,7 +227,7 @@ body{
         flex-direction: row;
         justify-content: space-around;
         padding-top: 3%;
-        padding-bottom: 3%;
+        padding-bottom: 2%;
         margin-top: 5%;
         // margin-bottom: 10%;
         margin-left: 1%;
@@ -215,14 +239,19 @@ body{
         align-items: center;
 
         #Your-return-rate{
-            margin-bottom: 100px;
-            
-            height: 10px;
-            
+            margin-bottom: 30%;
+            height: 15px;
             color: white;
             font-size: 40px;
+            
+            
             #IncomeRate{
-                margin-top: 10%;
+                margin-top: 2%;
+            }
+            #AvgRate{
+                font-size: 20px;
+                margin-top: 2%;
+                
             }
         }
     }
@@ -235,10 +264,11 @@ body{
 
 #mapid { 
     height: 800px; 
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     border-radius: 8px;
     margin-bottom: 5%;
+    margin-top: 10%;
 }
 
 .leaflet-popup-content{
