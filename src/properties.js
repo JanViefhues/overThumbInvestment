@@ -1,5 +1,7 @@
 import { dsvFormat } from "d3";
 
+
+
 //  :Part1: -----------------Creating gauge chart------------------ //
 
 let gauge = function(container, configuration) {
@@ -33,7 +35,7 @@ let gauge = function(container, configuration) {
     // arcColorFn: d3.interpolateHsl(d3.rgb("#ff0000"), d3.rgb("#00ff00"))
 
     // arcColorFn: d3.interpolateHsl(d3.rgb("#5A3E51"), d3.rgb("#FFFF"))
-    arcColorFn: d3.interpolateHsl(d3.rgb("#ED213A"), d3.rgb("#96c93d"))
+    arcColorFn: d3.interpolateHsl(d3.rgb("#c31432"), d3.rgb("#96c93d"))
   };
   let range = undefined;
   let r = undefined;
@@ -197,7 +199,7 @@ let powerGauge = gauge("#power-gauge", {
   size: 450,
   widht: 100,
   clipWidth: 450,
-  clipHeight: 250,
+  clipHeight: 300,
   ringWidth: 40,
   maxValue: 15,
   transitionMs: 5000
@@ -220,7 +222,7 @@ function updateGauge(gauge2, num) {
   gauge2.update(num);
 }
 
-// when want render the gauge graph when the document is loaded
+// we want render the gauge graph when the document is loaded
 if (!window.isLoaded) {
   window.addEventListener(
     "load",
@@ -238,7 +240,6 @@ if (!window.isLoaded) {
 
 let propertyData;
 // let incomeRate;
-
 const _calculateIncomeRate = propertyData => {
   let rent = propertyData.size * propertyData.squareMeterRent * 12; // total rent / year
   let rate = (rent / propertyData.price) * 100; // calculate incomeRate
@@ -253,29 +254,39 @@ const getInput = event => {
   propertyData = {
     price: document.getElementById("priceInput").value,
     size: document.getElementById("squareMetersInput").value,
-    squareMeterRent: document.getElementById("rentInput").value
+    squareMeterRent: document.getElementById("rentInput").value,
+    // city: document.getElementById("cityInput").value
+
   };
   console.log(propertyData);
 
   // deletes old element from DOM before rendering  new
+  let incomeRate = _calculateIncomeRate(propertyData);
+  if (incomeRate > 50 ) {
+    return alert(
+      `${incomeRate}% return? Right input? Your property numbers seems to be unrealistic. If they are real, go and buy that property right NOW!!!! `
+    );
+  }
   let oldEle = document.getElementById("IncomeRate");
   if (oldEle) oldEle.remove();
 
   // rendering calculated rent rate on page
   let result = document.createElement("h2");
   result.setAttribute("id", "IncomeRate");
-  result.innerHTML = _calculateIncomeRate(propertyData);
-  // document.body.appendChild(result);
-  // result.append(div)
-  document.getElementById("Your-return-rate").appendChild(result);
 
-  let incomeRate = _calculateIncomeRate(propertyData);
+  result.innerHTML = incomeRate + "%";
+  document.getElementById("Your-return-rate").appendChild(result);
+  
+
   updateGauge(powerGauge, incomeRate);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnProperty").addEventListener("click", getInput);
 });
+
+
+
 
 
 

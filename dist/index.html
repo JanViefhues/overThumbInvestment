@@ -6,6 +6,8 @@
     <script src="./d3.min.js"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -18,14 +20,22 @@
 
 <body>
     <header>
-        <h1 class="logo"> overThumbInvestment </h1>
         
+        <h1 class="logo"> overThumbInvestment. </h1>
+        <div class="info">
+            <a id="linkedIn" href="https://www.linkedin.com/in/jan-philipp-viefhues-b68885140/" target="_blank"> 
+                <img src="https://image.flaticon.com/icons/svg/61/61109.svg">
+            </a>
+            <a id="github" href="https://github.com/JanViefhues" target="_blank"> 
+                <img src="https://image.flaticon.com/icons/svg/2111/2111432.svg">
+            </a>
+            
+        </div>
     </header>
-
     <div class="body">
+
         <div class="aboutTheApp"></div>
-        
-        <h1 >Calculate your net rent </h1>
+        <h1>Net return calculation for apartments in germany</h1>
         <div class="Property-Container">
             <form class="Property-Form"> Fill in property data 
                 <div class="property-from-inputs">
@@ -34,20 +44,16 @@
                     step="10000" id="priceInput" placeholder="Proptery price"/>
                     <input type="number" step="1" id="squareMetersInput" placeholder="square meters" />
                     <input type="number" step="1" id="rentInput" placeholder="net rent / m2" />
+                    <input type="text" id="cityInput" placeholder="Put in city" />
                 </div>
                 <button id="btnProperty"> calculate </button>
             </form>
             <div id="power-gauge">
-                <div id="Your-return-rate">
-                    <p>The Net Income Rate is %</p>
-                </div>
+                <div id="Your-return-rate"></div>
             </div>
             </div>
-              <h2 class="avarageMap"> Explore the average </h2>
         </div>
-        
         <div id="mapid"></div>
-
     </div>
     
     <script src="./bundle.js"></script>

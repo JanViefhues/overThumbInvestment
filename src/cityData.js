@@ -1,18 +1,20 @@
 
-const geoBerlin = {
-  name: "Berlin",
-  latitude: 52.520008,
-  longitude: 13.404954,
-  acqPrice: 4200,
-  rental: 11.3
+// import {calculateNetIncomeRate} from "./map";
+
+
+
+// get the avarage rate for the city
+
+
+function calculate(acqPrice, rent) {
+  let rate = ((rent * 12) / acqPrice) * 100;
+  return rate.toFixed(2);
 }
 
 
 
-
-
-[
-  ({
+let citys = [
+  {
     name: "Berlin",
     latitude: 52.520008,
     longitude: 13.404954,
@@ -116,8 +118,46 @@ const geoBerlin = {
     longitude: 6.762692,
     acqPrice: 1200,
     rental: 6.1
-  })
+  }
 ];
     
 
+
+let price;
+let rent;
     
+
+const getCityInput = event => {
+  event.preventDefault();
+  cityData = {
+    cityName: document.getElementById("cityInput").value
+  };
+  if (cityData.cityName) {
+    for (let i = 0; i < citys.length; i++){
+      let city = citys[i];
+      if (city.name === cityData.cityName){
+        // console.log(city.rental);
+        price = city.acqPrice;
+        rent = city.rental;
+      }
+    }
+  }
+
+};
+
+let oldAvg = document.getElementById("AvgRate");
+if (oldAvg) oldAvg.remove();
+
+let newAvg = document.createElement("h2");
+newAvg.setAttribute("id", "AvgRate");
+
+newAvg.innerHTML = calculate(price, rent) + "%";
+document.getElementById("Your-return-rate").appendChild(newAvg);
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("btnProperty")
+    .addEventListener("click", getCityInput);
+});

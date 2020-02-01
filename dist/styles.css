@@ -1,84 +1,16 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -88,17 +20,8 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -106,21 +29,17 @@ body {
   line-height: 1;
 }
 
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
   content: none;
 }
 
@@ -130,7 +49,7 @@ table {
 }
 
 html * {
-  font-family: arial;
+  font-family: 'Roboto', sans-serif;
 }
 
 #power-gauge g.arc {
@@ -156,13 +75,14 @@ html * {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  margin-top: 5%;
   border-radius: 6px;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -173,28 +93,58 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
   color: white;
-  /* background: -webkit-gradient(linear, left top, right top, from(#a60b25), to(#240b36)); */
+  background: -webkit-gradient(linear, left top, right top, from(#a60b25), to(#240b36));
   background: linear-gradient(to right, #a60b25, #240b36);
   width: 100%;
-  font-size: 25px;
 }
 
 header .logo {
   margin: auto 0;
+  text-align: center;
   margin-left: 5%;
-  height: 100px;
+  text-align: center;
+  border: 2px solid white;
+  padding: 10px;
+  font-family: 'Teko', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+header .info {
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto 0;
+  margin-right: 10%;
+}
+
+header .info #linkedIn img, header .info #github img {
+  width: 45px;
 }
 
 body {
-  background-color: #100e17;
+  background-color: #100e1e;
 }
 
 .body {
   margin: auto 0;
-  margin-left: 8%;
-  margin-right: 8%;
+}
+
+.body h1 {
+  color: white;
+  font-size: 50px;
+  margin-top: 7%;
+  text-align: center;
+  color: #5B6568;
 }
 
 .body .Property-Form {
@@ -203,17 +153,22 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 411px;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 6px;
-  border: 1px solid white;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  border: 1px solid #5B6568;
+  background-color: #101332;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-right: 3%;
   color: white;
   font-size: 40px;
 }
@@ -224,8 +179,8 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 40px;
   font-size: 50px;
 }
@@ -263,8 +218,8 @@ body {
 
 .body .Property-Form #btnProperty {
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40%;
   height: 50px;
   border-radius: 8px;
@@ -291,45 +246,58 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   padding-top: 3%;
   padding-bottom: 3%;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-left: 1%;
+  margin-right: 1%;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   border-radius: 8px;
   min-height: 400px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-
-  
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .body .Property-Container #Your-return-rate {
+  margin-bottom: 100px;
   height: 10px;
   color: white;
   font-size: 40px;
 }
 
-.body .Property-Container #Your-return-rate p {
-  margin-bottom: 10%;
-  color: white;
-  border-radius: 10px;
+.body .Property-Container #Your-return-rate #IncomeRate {
+  margin-top: 10%;
 }
 
 #mapid {
-  height: 600px;
+  height: 800px;
   margin-left: 10%;
   margin-right: 10%;
   border-radius: 8px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+}
+
+.leaflet-popup-content {
+  font-size: 20px;
+  color: #5B6568;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+.leaflet-popup-content h3 {
+  font-size: 25px;
+  text-align: center;
+  color: #101346;
+}
+
+.leaflet-popup-content span {
+  font-weight: lighter;
+  font-size: 18px;
 }
 /*# sourceMappingURL=styles.css.map */
-.avarageMap{
-  color: white;
-}
