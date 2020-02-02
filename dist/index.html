@@ -46,7 +46,24 @@
                     <input type="number" step="1" id="squareMetersInput" placeholder="square meters" />
                     <input type="number" step="1" id="rentInput" placeholder="net rent / m2" />
                 </div>
-                <input type="text" id="cityInput" placeholder="Select the city" />
+                <select id="cityInput" placeholder="Select the city">
+                    <option> Berlin</option>
+                    <option> Hamburg</option>
+                    <option> Munich</option>
+                    <option> Cologne</option>
+                    <option> Frankfurt</option>
+                    <option> Stuttgart</option>
+                    <option> Duesseldorf</option>
+                    <option> Leipzig</option>
+                    <option>Dortmund</option>
+                    <option>Essen</option>
+                    <option>Bremen</option>
+                    <option>Dresden</option>
+                    <option>Hannover</option>
+                    <option>Nuernberg</option>
+                    <option>Duisburg</option>
+                </select >
+                
                 <button id="btnProperty"> calculate </button>
                 <span id="validations"></span>
             </form>
@@ -58,6 +75,7 @@
         </div>
         </div>
         <div id="mapid"></div>
+        <span id="source">Data source: homeday preisatlas </span>
     </div>
     
     <script src="./bundle.js"></script>

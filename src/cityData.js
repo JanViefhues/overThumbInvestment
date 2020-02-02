@@ -26,14 +26,14 @@ let citys = [
     name: "Munichen",
     latitude: 48.137154,
     longitude: 11.576124,
-    acqPrice: 7.5,
+    acqPrice: 7500,
     rental: 18.5
   },
   {
     name: "Cologne",
     latitude: 50.935173,
     longitude: 6.953101,
-    acqPrice: 5300,
+    acqPrice: 3650,
     rental: 11.2
   },
   {
