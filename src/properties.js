@@ -194,10 +194,10 @@ let gauge = function(container, configuration) {
 
 // setting the size values for the gaug graph
 let powerGauge = gauge("#power-gauge", {
-  size: 450,
+  size: 350,
   widht: 100,
-  clipWidth: 450,
-  clipHeight: 300,
+  clipWidth: 350,
+  clipHeight: 500,
   ringWidth: 40,
   maxValue: 15,
   transitionMs: 5000

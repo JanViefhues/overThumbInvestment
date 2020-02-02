@@ -137,7 +137,7 @@ const getCityInput = event => {
     if (oldAvg) oldAvg.remove();
     let newAvg = document.createElement("h2");
     newAvg.setAttribute("id", "AvgRate");
-    newAvg.innerHTML = `The avarage for ${cityData.cityName} is ` + calculate(price, rent) + "%";
+    newAvg.innerHTML = `The average for ${cityData.cityName} is ` + calculate(price, rent) + "%";
     document.getElementById("Your-return-rate").appendChild(newAvg);
   }
 };

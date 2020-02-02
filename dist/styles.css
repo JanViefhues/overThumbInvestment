@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,8 +88,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -29,17 +106,21 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
@@ -49,7 +130,7 @@ table {
 }
 
 html * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #power-gauge g.arc {
@@ -83,7 +164,6 @@ html * {
           flex-direction: column;
   text-align: center;
   border-radius: 6px;
-  padding-bottom: 10px;
   padding-top: 10px;
 }
 
@@ -108,7 +188,7 @@ header .logo {
   text-align: center;
   border: 2px solid white;
   padding: 10px;
-  font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 20px;
   letter-spacing: 3px;
 }
@@ -125,16 +205,13 @@ header .info {
   margin-right: 10%;
 }
 
-header .info #linkedIn img, header .info #github img {
+header .info #linkedIn img,
+header .info #github img {
   width: 45px;
 }
 
 body {
   background-color: #100e1e;
-}
-
-.body {
-  margin: auto 0;
 }
 
 .body #validation-input {
@@ -152,10 +229,10 @@ body {
 
 .body h1 {
   color: white;
-  font-size: 50px;
+  font-size: 40px;
   margin-top: 7%;
   text-align: center;
-  color: #5B6568;
+  color: #5b6568;
 }
 
 .body .Property-Form {
@@ -174,17 +251,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
-  border: 1px solid #5B6568;
+  border: 1px solid #5b6568;
   background-color: #101332;
   padding-top: 5%;
   padding-bottom: 2%;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .body .Property-Form .property-from-inputs {
+  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,8 +270,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 40px;
-  font-size: 50px;
+  font-size: 20px;
 }
 
 .body .Property-Form .property-from-inputs ::-webkit-input-placeholder {
@@ -220,19 +297,46 @@ body {
   margin-right: 30px;
   border-radius: 2px;
   font-size: 20px;
-  width: 150px;
+  width: 130px;
 }
 
 .body .Property-Form .property-from-inputs .input-price {
   margin-left: 18px;
 }
 
+.body .Property-Form #cityInput {
+  border-radius: 2px;
+  font-size: 20px;
+  width: 250px;
+}
+
+.body .Property-Form #cityInput::-webkit-input-placeholder {
+  font-size: 15px;
+  text-align: center;
+}
+
+.body .Property-Form #cityInput:-ms-input-placeholder {
+  font-size: 15px;
+  text-align: center;
+}
+
+.body .Property-Form #cityInput::-ms-input-placeholder {
+  font-size: 15px;
+  text-align: center;
+}
+
+.body .Property-Form #cityInput::placeholder {
+  font-size: 15px;
+  text-align: center;
+}
+
 .body .Property-Form #btnProperty {
+  margin-top: 5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 40%;
-  height: 50px;
+  height: 40px;
   border-radius: 8px;
   border: none;
   padding: 10px 14px;
@@ -240,7 +344,7 @@ body {
   font: 400 11px system-ui;
   cursor: pointer;
   background: #96c93d;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -249,7 +353,8 @@ body {
 .body .returns {
   height: 100px;
   margin-bottom: 298px;
-  border: 1px solid #5B6568;
+  margin-top: 1.5%;
+  border: 1px solid #5b6568;
   background-color: #101332;
   border-radius: 10px;
   padding-top: 3px;
@@ -273,9 +378,7 @@ body {
       justify-content: space-around;
   padding-top: 3%;
   padding-bottom: 2%;
-  margin-top: 5%;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-top: 2%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 8px;
@@ -286,10 +389,10 @@ body {
 }
 
 .body .Property-Container #Your-return-rate {
-  margin-bottom: 30%;
+  margin-bottom: 45%;
   height: 15px;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .body .Property-Container #Your-return-rate #IncomeRate {
@@ -298,13 +401,14 @@ body {
 
 .body .Property-Container #Your-return-rate #AvgRate {
   font-size: 20px;
-  margin-top: 2%;
+  margin-top: 5%;
+  color: #5b6568;
 }
 
 #mapid {
-  height: 800px;
-  margin-left: 5%;
-  margin-right: 5%;
+  height: 600px;
+  margin-left: 7%;
+  margin-right: 7%;
   border-radius: 8px;
   margin-bottom: 5%;
   margin-top: 10%;
@@ -312,7 +416,7 @@ body {
 
 .leaflet-popup-content {
   font-size: 20px;
-  color: #5B6568;
+  color: #5b6568;
   font-weight: bolder;
   padding-bottom: 10px;
 }
