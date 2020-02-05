@@ -92,6 +92,7 @@ header{
     color: white;
     background: linear-gradient(to right, #a60b25, #240b36);
     width: 100%;
+
     
     .logo{
         margin: auto 0;
@@ -103,20 +104,22 @@ header{
         font-family: 'Teko', sans-serif;
         font-size: 20px;
         letter-spacing: 3px;
+        cursor: pointer;
     }
     .info{
         width: 120px;
         display: flex;
         justify-content: space-between;
         margin: auto 0;
-        margin-right: 10%;
+        margin-right: 5%;
+        cursor: none;
        #linkedIn, #github{
+
             img{
                 width: 45px;
             }
        }
     }
-}
 
 body{
     background-color: rgb(16, 14, 30);
@@ -126,8 +129,6 @@ body{
 .body{
     margin: auto 0;
     
-
-   
     #validation-input{
         padding-left: 10px;
         padding-top: 20px;
@@ -285,4 +286,5 @@ body{
         font-weight: lighter;
         font-size: 18px;
     }
+}
 }

@@ -111,6 +111,7 @@ header .logo {
   font-family: 'Teko', sans-serif;
   font-size: 20px;
   letter-spacing: 3px;
+  cursor: pointer;
 }
 
 header .info {
@@ -122,22 +123,23 @@ header .info {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto 0;
-  margin-right: 10%;
+  margin-right: 5%;
+  cursor: none;
 }
 
 header .info #linkedIn img, header .info #github img {
   width: 45px;
 }
 
-body {
+header body {
   background-color: #100e1e;
 }
 
-.body {
+header .body {
   margin: auto 0;
 }
 
-.body #validation-input {
+header .body #validation-input {
   padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -150,7 +152,7 @@ body {
   border: 2px dotted white;
 }
 
-.body h1 {
+header .body h1 {
   color: white;
   font-size: 50px;
   margin-top: 7%;
@@ -158,7 +160,7 @@ body {
   color: #5B6568;
 }
 
-.body .Property-Form {
+header .body .Property-Form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +186,7 @@ body {
   font-size: 40px;
 }
 
-.body .Property-Form .property-from-inputs {
+header .body .Property-Form .property-from-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,38 +198,38 @@ body {
   font-size: 50px;
 }
 
-.body .Property-Form .property-from-inputs ::-webkit-input-placeholder {
+header .body .Property-Form .property-from-inputs ::-webkit-input-placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-.body .Property-Form .property-from-inputs :-ms-input-placeholder {
+header .body .Property-Form .property-from-inputs :-ms-input-placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-.body .Property-Form .property-from-inputs ::-ms-input-placeholder {
+header .body .Property-Form .property-from-inputs ::-ms-input-placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-.body .Property-Form .property-from-inputs ::placeholder {
+header .body .Property-Form .property-from-inputs ::placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-.body .Property-Form .property-from-inputs input {
+header .body .Property-Form .property-from-inputs input {
   margin-right: 30px;
   border-radius: 2px;
   font-size: 20px;
   width: 150px;
 }
 
-.body .Property-Form .property-from-inputs .input-price {
+header .body .Property-Form .property-from-inputs .input-price {
   margin-left: 18px;
 }
 
-.body .Property-Form #btnProperty {
+header .body .Property-Form #btnProperty {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -246,7 +248,7 @@ body {
   text-transform: uppercase;
 }
 
-.body .returns {
+header .body .returns {
   height: 100px;
   margin-bottom: 298px;
   border: 1px solid #5B6568;
@@ -256,12 +258,12 @@ body {
   padding-bottom: 5px;
 }
 
-.body .Form-1-header {
+header .body .Form-1-header {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: white;
 }
 
-.body .Property-Container {
+header .body .Property-Container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,23 +287,23 @@ body {
           align-items: center;
 }
 
-.body .Property-Container #Your-return-rate {
+header .body .Property-Container #Your-return-rate {
   margin-bottom: 30%;
   height: 15px;
   color: white;
   font-size: 40px;
 }
 
-.body .Property-Container #Your-return-rate #IncomeRate {
+header .body .Property-Container #Your-return-rate #IncomeRate {
   margin-top: 2%;
 }
 
-.body .Property-Container #Your-return-rate #AvgRate {
+header .body .Property-Container #Your-return-rate #AvgRate {
   font-size: 20px;
   margin-top: 2%;
 }
 
-#mapid {
+header #mapid {
   height: 800px;
   margin-left: 5%;
   margin-right: 5%;
@@ -310,20 +312,20 @@ body {
   margin-top: 10%;
 }
 
-.leaflet-popup-content {
+header .leaflet-popup-content {
   font-size: 20px;
   color: #5B6568;
   font-weight: bolder;
   padding-bottom: 10px;
 }
 
-.leaflet-popup-content h3 {
+header .leaflet-popup-content h3 {
   font-size: 25px;
   text-align: center;
   color: #101346;
 }
 
-.leaflet-popup-content span {
+header .leaflet-popup-content span {
   font-weight: lighter;
   font-size: 18px;
 }
