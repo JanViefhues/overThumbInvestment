@@ -1,7 +1,7 @@
 ## Summary
 overThumbInvestment is a calculation tool for real estate investors. It gives them a rough overview of the investment option by calculating the basic financing KPI's for a property. This helps them to get a first and quick evaluation of the investment option.
 
-[take a look ](https://janviefhues.github.io/))
+[take a look ](https://janviefhues.github.io/overThumbLive/)
 
 ## Background
 Making quick decisions is a very important capability when it comes to investment opportunities. Investors have to evaluate possible options really fast to close the deal before other investors do.
