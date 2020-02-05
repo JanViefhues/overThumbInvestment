@@ -127,7 +127,6 @@ const getCityInput = event => {
     for (let i = 0; i < citys.length; i++) {
       let city = citys[i];
       if (city.name === cityData.cityName) {
-        // console.log(city.rental);
         price = city.acqPrice;
         rent = city.rental;
       }

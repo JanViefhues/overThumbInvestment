@@ -230,7 +230,7 @@ body {
 .body h1 {
   color: white;
   font-size: 40px;
-  margin-top: 7%;
+  margin-top: 3%;
   text-align: center;
   color: #5b6568;
 }
@@ -378,7 +378,6 @@ body {
       justify-content: space-around;
   padding-top: 3%;
   padding-bottom: 2%;
-  margin-top: 2%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 8px;
@@ -411,7 +410,7 @@ body {
   margin-right: 7%;
   border-radius: 8px;
   margin-bottom: 5%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .leaflet-popup-content {

@@ -259,7 +259,7 @@ const getInput = event => {
   if (!propertyData.price && !propertyData.size && !propertyData.squareMeterRent) {
     let FormVal = document.createElement("h2");
     FormVal.setAttribute("id", "validation-input");
-    FormVal.innerHTML = "Please fill in porperty data";
+    FormVal.innerHTML = "Please fill in property data";
     document.getElementById("validations").appendChild(FormVal);
 
   } else if (incomeRate > 50) {

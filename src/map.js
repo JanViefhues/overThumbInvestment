@@ -1,29 +1,3 @@
-// boundy data for drwaing the polygon in the map
-// -> geting OSM id from openstreetmap
-// getting the geojson among the id on polygons.openstreetmap
-// import {propertyData} from "./properties";
-
-// const mymap = L.map("mapid").setView([51.133481, 10.018343], 5.5);
-
-// const getCityInput = event => {
-//   event.preventDefault();
-//   cityData = {
-//     cityName: document.getElementById("cityInput").value
-//   };
-//   console.log(cityData);
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   document.getElementById("btnProperty").addEventListener("click", getCityInput);
-// });
-
-
-
-
-
-
-
-
 
 function onEachFeature(feature, marker) {
   if (feature.properties.incomeRate && feature.properties.cityName) {
