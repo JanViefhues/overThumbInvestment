@@ -232,7 +232,6 @@ if (!window.isLoaded) {
 // :Part3: -------- Getting the input data and do calculation ------------- //
 
 let propertyData;
-// let incomeRate;
 const _calculateIncomeRate = propertyData => {
   let rent = propertyData.size * propertyData.squareMeterRent * 12; // total rent / year
   let rate = (rent / propertyData.price) * 100; // calculate incomeRate
