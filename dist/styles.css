@@ -191,7 +191,6 @@ header .logo {
   font-family: "Teko", sans-serif;
   font-size: 20px;
   letter-spacing: 3px;
-  cursor: pointer;
 }
 
 header .info {
@@ -203,8 +202,7 @@ header .info {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto 0;
-  margin-right: 5%;
-  cursor: none;
+  margin-right: 10%;
 }
 
 header .info #linkedIn img,
@@ -212,7 +210,7 @@ header .info #github img {
   width: 45px;
 }
 
-header body {
+body {
   background-color: #100e1e;
 }
 
@@ -229,7 +227,7 @@ header body {
   border: 2px dotted white;
 }
 
-header .body h1 {
+.body h1 {
   color: white;
   font-size: 40px;
   margin-top: 3%;
@@ -237,7 +235,7 @@ header .body h1 {
   color: #5b6568;
 }
 
-header .body .Property-Form {
+.body .Property-Form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,34 +273,34 @@ header .body .Property-Form {
   font-size: 20px;
 }
 
-header .body .Property-Form .property-from-inputs ::-webkit-input-placeholder {
+.body .Property-Form .property-from-inputs ::-webkit-input-placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-header .body .Property-Form .property-from-inputs :-ms-input-placeholder {
+.body .Property-Form .property-from-inputs :-ms-input-placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-header .body .Property-Form .property-from-inputs ::-ms-input-placeholder {
+.body .Property-Form .property-from-inputs ::-ms-input-placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-header .body .Property-Form .property-from-inputs ::placeholder {
+.body .Property-Form .property-from-inputs ::placeholder {
   font-size: 15px;
   text-align: center;
 }
 
-header .body .Property-Form .property-from-inputs input {
+.body .Property-Form .property-from-inputs input {
   margin-right: 30px;
   border-radius: 2px;
   font-size: 20px;
   width: 130px;
 }
 
-header .body .Property-Form .property-from-inputs .input-price {
+.body .Property-Form .property-from-inputs .input-price {
   margin-left: 18px;
 }
 
@@ -352,7 +350,7 @@ header .body .Property-Form .property-from-inputs .input-price {
   text-transform: uppercase;
 }
 
-header .body .returns {
+.body .returns {
   height: 100px;
   margin-bottom: 298px;
   margin-top: 1.5%;
@@ -363,12 +361,12 @@ header .body .returns {
   padding-bottom: 5px;
 }
 
-header .body .Form-1-header {
+.body .Form-1-header {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: white;
 }
 
-header .body .Property-Container {
+.body .Property-Container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,11 +394,11 @@ header .body .Property-Container {
   font-size: 30px;
 }
 
-header .body .Property-Container #Your-return-rate #IncomeRate {
+.body .Property-Container #Your-return-rate #IncomeRate {
   margin-top: 2%;
 }
 
-header .body .Property-Container #Your-return-rate #AvgRate {
+.body .Property-Container #Your-return-rate #AvgRate {
   font-size: 20px;
   margin-top: 5%;
   color: #5b6568;
@@ -415,20 +413,20 @@ header .body .Property-Container #Your-return-rate #AvgRate {
   margin-top: 5%;
 }
 
-header .leaflet-popup-content {
+.leaflet-popup-content {
   font-size: 20px;
   color: #5b6568;
   font-weight: bolder;
   padding-bottom: 10px;
 }
 
-header .leaflet-popup-content h3 {
+.leaflet-popup-content h3 {
   font-size: 25px;
   text-align: center;
   color: #101346;
 }
 
-header .leaflet-popup-content span {
+.leaflet-popup-content span {
   font-weight: lighter;
   font-size: 18px;
 }
@@ -436,5 +434,44 @@ header .leaflet-popup-content span {
 #source {
   color: white;
   margin-left: 6%;
+}
+
+@media only screen and (max-width: 375px) {
+  header {
+    display: none;
+  }
+  .Property-Form {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    padding: 0;
+  }
+  .property-from-inputs > div {
+    margin-top: 10px;
+    margin-left: 15%;
+    width: 100%;
+  }
+  input {
+    width: 80%;
+  }
+  .returns {
+    width: 310px;
+  }
+  .property-from-inputs {
+    width: 200px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .body > h1 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

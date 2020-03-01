@@ -371,3 +371,43 @@ body {
     color: white;
     margin-left: 6%;
 }
+
+
+@media only screen and (max-width: 375px){
+  header {
+    display: none;
+  }
+  .Property-Form{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    padding: 0;
+  }
+  .property-from-inputs > div{
+    margin-top: 10px;
+    margin-left: 15%;
+    width: 100%;
+  }
+  input{
+    width: 80%;
+  }
+
+  .returns{
+    width: 310px;
+  }
+ 
+  .property-from-inputs{
+   width: 200px;
+   flex-wrap: wrap;
+  
+ 
+  }
+
+  .body > h1{
+    display: none;
+  }
+
+}

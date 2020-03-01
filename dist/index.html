@@ -5,6 +5,7 @@
     <title>overThumbInvestment</title>
     <script src="./d3.min.js"></script>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="styles.css"></link>
     <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -33,18 +34,18 @@
         </div>
     </header>
     <div class="body">
-
-
         <div class="aboutTheApp"></div>
         <h1>Net return calculation for apartments in germany's major cities</h1>
         <div class="Property-Container">
             <form class="Property-Form"> Fill in property data 
                 <div class="property-from-inputs">
+                    <div>
                     <input class="input-price"
                     type="number" 
-                    step="10000" id="priceInput" placeholder="Property price"/>
-                    <input type="number" step="1" id="squareMetersInput" placeholder="square meters" />
-                    <input type="number" step="1" id="rentInput" placeholder="net rent / m2" />
+                    step="10000" id="priceInput" placeholder="Property price"/> 
+                    </div>
+                    <div><input type="number" step="1" id="squareMetersInput" placeholder="square meters" /></div>
+                    <div><input type="number" step="1" id="rentInput" placeholder="net rent / m2" /></div>
                 </div>
                 <select id="cityInput" placeholder="Select the city">
                     <option> Berlin</option>
